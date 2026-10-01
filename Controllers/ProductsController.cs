@@ -9,8 +9,8 @@ public class ProductsController : ControllerBase
 {
     private static readonly List<Product> Products = new()
     {
-        new Product { Id = 1, Name = "Laptop", Price = 80000 },
-        new Product { Id = 2, Name = "Phone", Price = 50000 }
+        new Product { Id = 1, Name = "Айфон", Price = 80000 },
+        new Product { Id = 2, Name = "Самсунг", Price = 50000 }
     };
 
     [HttpGet]

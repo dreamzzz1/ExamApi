@@ -18,7 +18,7 @@ mkdir -p /home/USER/appcd/home/USER/app
 
 4.  СКАЧАТЬ ПРОЕКТ С GITHUB
 
-git clone https://github.com/vadimvysh/ExamApi.git .
+git clone https://github.com/dreamzzz1/ExamApi.git .
 
 ВАЖНО: точка в конце нужна, чтобы проект клонировался прямо в текущую
 папку.
@@ -36,7 +36,7 @@ sudo mkdir -p /var/www/app
 
 6.  СОБРАТЬ И ОПУБЛИКОВАТЬ ПРОЕКТ
 
-sudo dotnet publish -c Release –output /var/www/app
+sudo dotnet publish -c Release --output /var/www/app
 
 Проверить:
 
@@ -46,8 +46,8 @@ ls /var/www/app
 
 7.  ВЫСТАВИТЬ ВЛАДЕЛЬЦА И ПРАВА
 
-sudo chown -R www-data:www-data /var/www/app sudo chmod -R 755
-/var/www/app
+sudo chown -R www-data:www-data /var/www/app 
+sudo chmod -R 755 /var/www/app
 
 8.  СКОПИРОВАТЬ ГОТОВЫЙ SYSTEMD-КОНФИГ
 
@@ -70,7 +70,8 @@ sudo nginx -t
 
 12. ПЕРЕЧИТАТЬ SYSTEMD И ЗАПУСТИТЬ API
 
-sudo systemctl daemon-reload sudo systemctl enable –now examapi
+sudo systemctl daemon-reload 
+sudo systemctl enable --now examapi
 
 13. ПРОВЕРИТЬ SYSTEMD-СЕРВИС
 
@@ -86,8 +87,9 @@ sudo systemctl restart nginx
 
 15. ПРОВЕРИТЬ API ВНУТРИ UBUNTU
 
-curl http://localhost/health curl http://localhost/api/products curl
-http://localhost/api/categories
+curl http://localhost/health 
+curl http://localhost/api/products 
+curl http://localhost/api/categories
 
 Ожидается примерно:
 
