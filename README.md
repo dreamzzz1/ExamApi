@@ -265,3 +265,26 @@ curl http://localhost:5000/health
 Проверить через Nginx:
 
 curl http://localhost/health
+
+
+echo "=== API ==="
+curl http://localhost/health
+curl http://localhost/api/products
+curl http://localhost/api/categories
+
+echo "=== PORTS ==="
+sudo ss -ltnp
+
+echo "=== NGINX CONFIG ==="
+sudo cat /etc/nginx/sites-available/examapi
+
+echo "=== API CONFIG ==="
+sudo cat /etc/systemd/system/examapi.service
+
+echo "=== STATUS ==="
+systemctl is-active nginx
+systemctl is-active examapi
+
+echo "=== AUTOSTART ==="
+systemctl is-enabled nginx
+systemctl is-enabled examapi

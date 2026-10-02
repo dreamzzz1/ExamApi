@@ -9,8 +9,8 @@ public class CategoriesController : ControllerBase
 {
     private static readonly List<Category> Categories = new()
     {
-        new Category { Id = 1, Name = "любимые пары" },
-        new Category { Id = 2, Name = "интересные факты" },
+        new Category { Id = 1, Name = "Clothing" },
+        new Category { Id = 2, Name = "Sneakers" },
     };
 
     [HttpGet]
